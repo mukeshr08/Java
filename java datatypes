@@ -1,0 +1,12 @@
+public class index {
+    public static void main(String[] args){
+        char a='t';
+        int b=45;
+        String c="hello";
+        float d=5.0f;
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+        System.out.println(d);
+        // System.out.println(e);
+    }
