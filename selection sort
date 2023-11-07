@@ -1,0 +1,64 @@
+//  public class index{
+
+//     public static void main(String[] args) {
+//         int arr[][]={{1,2,3,4},{5,6,7,8}};
+//         System.out.println(arr.length);
+//     }
+// }
+// public class index {
+//     public static void main(String[] args){
+
+//         System.out.println("Hello World");
+//     }
+// }
+// public class index {
+//     public static void main(String[] args){
+
+//         System.out.print("Hello World");
+//         System.out.print("Hello World");
+
+//     }
+// }
+// public class index {
+//     public static void main(String[] args){
+//         char a='t';
+//         int b=45;
+//         String c="hello";
+//         float d=5.0f;
+//         System.out.println(a);
+//         System.out.println(b);
+//         System.out.println(c);
+//         System.out.println(d);
+//         // System.out.println(e);
+//     }
+// }
+
+;
+public class index{
+    public static void selectionsort(int[] arr){
+        for (int i=0;i<arr.length-1;i++){
+            int index=i;
+            for(int j=i+1;j<arr.length;j++){
+                if(arr[j]<arr[index]){
+                    index=j;
+                }
+            }
+            int smallnumber=arr[index];
+            arr[index]=arr[i];
+            arr[i]=smallnumber;
+        }
+    }
+    public static void main(String args[]){
+        int [] arr1={9,14,8,2,4,3,11,58,22};
+        System.out.println("before selection sort");
+        for(int i: arr1){
+            System.out.println(i+"");
+        }
+        System.out.println();
+        selectionsort(arr1);
+        System.out.println("after selection sort");
+        for(int i:arr1){
+            System.out.println(i+"");
+        }
+    }
+}
