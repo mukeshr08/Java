@@ -1,0 +1,80 @@
+public class index{
+    int size=5;
+    int items[]=new int[size];
+    int front,rear;
+    index(){
+        front=-1;
+        rear=-1;
+    }
+    boolean isFull(){
+        
+            return (front==0&&rear==size-1);
+        }
+        boolean isEmpty(){
+            if(front==-1)
+                return true;
+            else
+                return false;
+        }
+        void enQueue(int element){
+            if(isFull()){
+                System.out.println("Queue is full");
+            }
+            else{
+                if(front==-1){
+
+                    front=0;
+                }
+                rear++;
+                items[rear]=element;
+                System.out.println("Inseting"+element);
+            }
+        }
+        int deQueue(int element){
+            // int element;
+            if(isEmpty()){
+                System.out.println("Queue is Empty");
+                return(-1);
+            }
+            else{
+                element=items[front];
+                if(front>=rear){
+                    front=-1;
+                    rear=-1;
+                }
+                else{
+                    front++;
+                }
+                System.out.println("deleted ->"+element);
+                return element;
+            }
+        }
+        void display(){
+            int i;
+            if(isEmpty()){
+                System.out.println("empty queue");
+            }
+            else{
+                System.out.println("infront index ->"+front);
+                System.out.println("items ->");
+                for(i=front;i<=rear;i++)
+                    System.out.println(items[i]);
+                    System.out.println("\n rear index"+rear);
+            }
+        }
+        public static void main(String[] args){
+            index q=new index();
+            
+            
+            q.enQueue(2);
+            q.enQueue(3);
+            q.enQueue(4);
+            q.enQueue(5);
+            q.enQueue(6);
+            q.enQueue(7);
+            q.enQueue(8);
+            q.deQueue(0);
+            q.display();
+        }
+    
+}
