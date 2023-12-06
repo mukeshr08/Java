@@ -1,0 +1,13 @@
+public class datatypes {
+    public static void main(String[] args) {
+        int age=18;
+        double price=1.5;
+        char symbol='$';
+        String sentence="Hello World";
+        System.out.println("The age is "+age );
+        System.out.println("The price is "+price );
+        System.out.println("The symbol is "+symbol);
+        System.out.println("The sentence is "+sentence);
+    }
+    
+}
